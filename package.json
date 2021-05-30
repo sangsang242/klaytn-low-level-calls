@@ -1,0 +1,31 @@
+{
+  "name": "klaytn-low-level-calls",
+  "version": "1.0.0",
+  "description": "A library for low-level-calls development in Klaytn",
+  "scripts": {
+    "pretest": "npm run compile",
+    "precompile": "npm run clean",
+    "clean": "rimraf ./build/",
+    "compile": "waffle .waffle.json",
+    "test": "mocha",
+    "posttest": "npm run lint",
+    "lint": "npx prettier ./test/*.ts --check",
+    "lint:fix": "npx prettier ./test/*.ts --write"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "LGPL",
+  "devDependencies": {
+    "@openzeppelin/contracts": "^2.5.1",
+    "@types/chai": "^4.2.15",
+    "@types/mocha": "^8.2.0",
+    "chai": "^4.3.0",
+    "ethereum-waffle": "^2.4.1",
+    "ethereumjs-util": "^6.2.0",
+    "mocha": "^8.3.0",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.5"
+  }
+}
